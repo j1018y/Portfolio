@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chun-Min Yu | Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Chun-Min Yu, featuring research in NLP, computer vision, multimodal learning, and generative AI."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+        <header class="topbar">
+          <a class="wordmark" href="#home">Chun-Min Yu</a>
+          <nav class="topnav">
+            <a href="#projects">Projects</a>
+            <a href="#research">Research</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </header>
+
+      <main id="home">
+        <section class="hero section">
+          <div class="hero-copy">
+            <p class="eyebrow">NLP · Computer Vision · Multimodal Learning</p>
+            <!-- <h1>Research-driven systems for language, motion, and generative AI.</h1> -->
+            <p class="hero-text">
+              I’m Chun-Min Yu, a computer science student at National Tsing Hua University. I used to work in IKM Lab, and I'm currently working in NLPSA Lab as Research Assistant. My work spans transformer efficiency, 
+              human motion understanding, and robotic vision augmentation.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="Curriculum_Vitae.pdf" target="_blank" rel="noreferrer">Open CV</a>
+              <a class="button button-secondary" href="#projects">View selected work</a>
+            </div>
+            <ul class="hero-facts">
+              <li>NTHU B.S. in Computer Science, GPA 3.86/4.3</li>
+              <li>Incoming / enrolled M.S. in Computer Science at NTHU</li>
+              <li>Focus areas: LLMs, NLP, computer vision, multimodal systems</li>
+            </ul>
+          </div>
+          <div class="hero-visual">
+            <div class="portrait-card">
+              <img src="專題/IMG_9115.jpg" alt="Chun-Min Yu presenting a research poster." />
+            </div>
+            <div class="metric-band">
+              <article>
+                <span>90.1%</span>
+                <p>Frame-level accuracy in jump height prediction</p>
+              </article>
+              <article>
+                <span>0.2-1.1%</span>
+                <p>Improvement range reported on benchmark tasks</p>
+              </article>
+              <article>
+                <span>WACV 2026</span>
+                <p>Demo first-author work in athletic potential assessment</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section-grid" id="research">
+          <div class="section-heading">
+            <p class="eyebrow">Current Research Direction</p>
+          </div>
+          <div class="grid-panels">
+            <article class="panel">
+              <h3>Multimodal athletic assessment</h3>
+              <p>
+                Developed an end-to-end system for assessing athletic potential
+                through alignment-based analysis of fundamental human movements.
+              </p>
+            </article>
+            <article class="panel">
+              <h3>Transformer efficiency</h3>
+              <p>
+                Proposed an attention-skip mechanism that identifies redundant or
+                harmful heads and selectively bypasses them during attention.
+              </p>
+            </article>
+            <article class="panel">
+              <h3>LLM Continual Learning Research</h3>
+              <p>
+                Investigating methods to transition LLM in-context learning (ICL) into persistent memory, 
+                addressing context window constraints and mitigating catastrophic forgetting.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="projects">
+          <div class="section-heading split">
+            <div>
+
+              <h2>Projects</h2>
+            </div>
+            <!-- <p class="section-note">
+              Each project card links directly to the poster, report, or resume
+              artifact available here.
+            </p> -->
+          </div>
+
+          <div class="project-stack">
+            <article class="project-card">
+              <div class="project-index">01</div>
+              <div class="project-body">
+                <div class="project-meta">
+                  <span>NLP</span>
+                  <span>Transformers</span>
+                  <span>Efficiency</span>
+                </div>
+                <h3>Towards Compute-Aware Attention</h3>
+                <p>
+                  I proposed an attention skip mechanism for redundant transformer
+                  heads. The work studies attention sinks, low-norm value vectors,
+                  and head-wise routing behavior to reduce unnecessary computation
+                  while improving benchmark performance.
+                </p>
+                <ul class="project-points">
+                  <li>Observed sink behavior where attention collapses onto low-semantic tokens.</li>
+                  <li>Designed runtime head masking based on row-wise peakedness.</li>
+                  <li>Reported gains on GLUE, IMDb, and SQuAD-style tasks.</li>
+                </ul>
+                <h4>Achievement</h4>
+                <ul class="project-points">
+                  <li> Awarded 2nd Place in the Computer Science, and 3rd Place in the EECS Undergraduate Project Competitions at NTHU.</li>
+                </ul>
+                <div class="project-links">
+                  <a href="專題/114上專題書面報告_111062134_游竣閔_公開展覽.pdf" target="_blank" rel="noreferrer">Open paper</a>
+                  <a href="專題/114上專題_111062134_游竣閔.pdf" target="_blank" rel="noreferrer">Open poster abstract</a>
+                  <a href="https://youtu.be/XAIrJftGe0A?si=bHL1835_Q3xnTR_N" target="_blank" rel="noreferrer">Watch introduction</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card featured">
+              <div class="project-index">02</div>
+              <div class="project-body">
+                <div class="project-meta">
+                  <span>Multimodal</span>
+                  <span>Human Motion</span>
+                  <span>Evaluation Systems</span>
+                </div>
+                <h3>Talent Profiling via Fundamental Human Movements</h3>
+                <p>
+                  This research combines motion encoding, sport-specific language
+                  generation, and general evaluation to assess athletic potential
+                  from foundational movement patterns.
+                </p>
+                <ul class="project-points">
+                  <li>Encoded motion differences against reference videos with a trainable motion encoder.</li>
+                  <li>Used a motion-finetuned Llama module for action-specific analysis.</li>
+                  <li>Aggregated per-action evaluation into broader GPT-based insights.</li>
+                </ul>
+                <h4>Achievement</h4>
+                <ul class="project-points">
+                  <li>WACV demo session, First author</li>
+                </ul>
+                <div class="project-links">
+                  <a href="中研院/海報.pdf" target="_blank" rel="noreferrer">Open research poster</a>
+                  <a href="https://drive.google.com/file/d/1WSny2RetD_7JS9EDA2bQelLn8-XGZ9ry/view?usp=drive_link" target="_blank" rel="noreferrer">Watch demo video</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-index">03</div>
+              <div class="project-body">
+                <div class="project-meta">
+                  <span>Robotic Vision</span>
+                  <span>Generative AI</span>
+                  <span>Video Understanding</span>
+                </div>
+                <h3>Generative Semantic Augmentation for Robot Vision</h3>
+                <p>
+                  This project addresses distribution shift in robotic vision by
+                  generating logically consistent training videos. The pipeline
+                  combines temporally aware segmentation, mask-constrained video
+                  generation, and a VideoQA stage for structured semantic feedback.
+                </p>
+                <ul class="project-points">
+                  <li>Integrated SAM-I2V for stable spatiotemporal segmentation.</li>
+                  <li>Used Wan 2.1 for latent-space video inpainting and object swapping.</li>
+                  <li>Added YOLOv8n and Qwen2.5-VL based VideoQA for validation.</li>
+                </ul>
+                <div class="project-links">
+                  <a href="CVPDL_final_report_Group12.pdf" target="_blank" rel="noreferrer">Open full report</a>
+
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section timeline-section">
+          <div class="section-heading">
+            <p class="eyebrow">Experience Timeline</p>
+            <!-- <h2>Lab work across NLP, computer vision, and continual learning.</h2> -->
+          </div>
+          <div class="timeline">
+            <article class="timeline-item">
+              <span class="timeline-date">2026 - Present</span>
+              <h3>DataLab</h3>
+              <p>
+                Exploring continual learning for LLMs, with an emphasis on
+                context compression, persistent memory, and catastrophic forgetting.
+              </p>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-date">2025 - Present</span>
+              <h3>NLPSA Lab</h3>
+              <p>
+                Working on multimodal learning for athletic assessment, motion
+                analysis, and text-conditioned diffusion-based motion generation.
+              </p>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-date">2024 - 2025</span>
+              <h3>IKM Lab</h3>
+              <p>
+                Studied attention mechanisms in transformers and developed a skip
+                mechanism recognized in NTHU undergraduate competitions.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="artifacts">
+          <div>
+            <p class="eyebrow">Capabilities</p>
+            <!-- <h2>Core strengths</h2> -->
+            <div class="tag-cluster">
+              <span>NLP</span>
+              <span>LLMs</span>
+              <span>Computer Vision</span>
+              <span>Multimodal Learning</span>
+              <span>PyTorch</span>
+              <span>HuggingFace</span>
+              <span>Python</span>
+              <span>C / C++</span>
+              <span>Flutter</span>
+              <span>Firebase</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section contact-card" id="contact">
+          <p class="eyebrow">Contact</p>
+          <h2>Open to research collaboration and technical opportunities.</h2>
+          <p>
+            Reach me at
+            <a href="mailto:jimmy921018yes@gmail.com">jimmy921018yes@gmail.com</a>,
+            or connect through
+            <a href="https://github.com/j1018y" target="_blank" rel="noreferrer">GitHub</a>
+            and
+            <a href="https://www.linkedin.com/in/jimmy-yu-a93777351" target="_blank" rel="noreferrer">LinkedIn</a>.
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
