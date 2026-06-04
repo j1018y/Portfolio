@@ -50,8 +50,8 @@
                 <p>Frame-level accuracy in jump height prediction</p>
               </article>
               <article>
-                <span>0.2-1.1%</span>
-                <p>Improvement range reported on benchmark tasks</p>
+                <span>1.1%</span>
+                <p>Improvement reported on benchmark tasks based on Attention-Mechanism Optimization</p>
               </article>
               <article>
                 <span>WACV 2026</span>
@@ -116,7 +116,7 @@
                   I proposed an attention skip mechanism for redundant transformer
                   heads. The work studies attention sinks, low-norm value vectors,
                   and head-wise routing behavior to reduce unnecessary computation
-                  while improving benchmark performance.
+                  and improve model performance.
                 </p>
                 <ul class="project-points">
                   <li>Observed sink behavior where attention collapses onto low-semantic tokens.</li>
@@ -147,12 +147,18 @@
                 <p>
                   This research combines motion encoding, sport-specific language
                   generation, and general evaluation to assess athletic potential
-                  from foundational movement patterns.
+                  from foundational movement patterns.  We transform
+                  complex video data into "motion tokens", allowing Large
+                  Language Models to "read" and understand human movement
+                  using their deep, pre-existing sports domain knowledge.
                 </p>
                 <ul class="project-points">
                   <li>Encoded motion differences against reference videos with a trainable motion encoder.</li>
-                  <li>Used a motion-finetuned Llama module for action-specific analysis.</li>
-                  <li>Aggregated per-action evaluation into broader GPT-based insights.</li>
+                  <li>Enable multimodal understanding by mapping multimodal
+                      inputs into a form the LLM can reason about using
+                      pretrained knowledge without large-scale fine-tuning.</li>
+                  <li>Provide a unified real-time motion evaluation system that
+                      delivers corrective feedback across diverse exercises.</li>
                 </ul>
                 <h4>Achievement</h4>
                 <ul class="project-points">
@@ -175,10 +181,12 @@
                 </div>
                 <h3>Generative Semantic Augmentation for Robot Vision</h3>
                 <p>
-                  This project addresses distribution shift in robotic vision by
-                  generating logically consistent training videos. The pipeline
-                  combines temporally aware segmentation, mask-constrained video
-                  generation, and a VideoQA stage for structured semantic feedback.
+                  Robotic vision models often fail under distribution
+                  shifts because collecting and labeling real-world videos that
+                  cover diverse environments, objects, and interaction dynamics is
+                  expensive and risky. We present a practical pipeline for generative
+                  semantic augmentation that transforms an input video into new,
+                  logically consistent training samples by combining temporallyaware object segmentation with mask-constrained video generation. 
                 </p>
                 <ul class="project-points">
                   <li>Integrated SAM-I2V for stable spatiotemporal segmentation.</li>

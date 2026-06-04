@@ -217,6 +217,8 @@ h3 {
 .hero-visual {
   display: grid;
   gap: 18px;
+  max-width: 440px;
+  justify-self: center;
 }
 
 .portrait-card,
