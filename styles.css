@@ -542,3 +542,92 @@ h3 {
     font-size: 1rem;
   }
 }
+
+@page {
+  size: A4;
+  margin: 12mm;
+}
+
+@media print {
+  :root {
+    --content-width: 100%;
+    --surface: #fffdf8;
+    --line: rgba(74, 53, 34, 0.18);
+    --shadow: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    background: #fbf5ee;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body::before {
+    display: none;
+  }
+
+  .page-shell {
+    width: 100%;
+    margin: 0;
+    padding-bottom: 0;
+  }
+
+  .topbar {
+    position: static;
+    top: auto;
+    margin: 0 0 18px;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+
+  .section {
+    padding: 18px 0;
+    break-inside: avoid;
+  }
+
+  .hero {
+    min-height: auto;
+    align-items: start;
+    page-break-after: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    display: none;
+  }
+
+  .portrait-card,
+  .panel,
+  .project-card,
+  .timeline-item,
+  .artifact-panel,
+  .contact-card,
+  .metric-band article {
+    box-shadow: none;
+    backdrop-filter: none;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .project-stack,
+  .timeline,
+  .grid-panels,
+  .metric-band {
+    break-inside: auto;
+  }
+
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  a[href^="http"]::after {
+    content: "";
+  }
+}
